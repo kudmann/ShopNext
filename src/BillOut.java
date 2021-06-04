@@ -23,7 +23,7 @@ public class BillOut {
     }
 
     public void printBill() throws IOException {
-        File file = new File("e:\\javalessons\\ShopNext\\bill" + dateTime1 + ".txt");
+        File file = new File("bill" + dateTime1 + ".txt");
         try (FileWriter fileWriter = new FileWriter(file);
              BufferedWriter bfWriter = new BufferedWriter(fileWriter)) {
             Formatter form = new Formatter();

@@ -5,7 +5,7 @@ import java.util.List;
 public class Serial implements Serializable {
 
     public static void serialize(List<User> users) {
-        File file = new File("e:\\javalessons\\ShopNext\\users.data");
+        File file = new File("users.data");
         file.delete();
         try {
             file.createNewFile();
@@ -27,7 +27,7 @@ public class Serial implements Serializable {
 
     public static List<User> deserialize() {
         List<User> userList = new ArrayList<>();
-        File file = new File("e:\\javalessons\\ShopNext\\users.data");
+        File file = new File("users.data");
         try (FileInputStream fileInputStream = new FileInputStream(file);
              ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
             int size = objectInputStream.readInt();

@@ -12,7 +12,7 @@ public class Shopping {
     }
 
     public static void setShopList() throws IOException {
-        File list = new File("e:\\shop.txt");
+        File list = new File("shop.txt");
         List<String> lines = new ArrayList<>();
         try (FileReader fileReader = new FileReader(list);
              BufferedReader bReader = new BufferedReader(fileReader)) {
@@ -30,13 +30,11 @@ public class Shopping {
             product.setType(scanner.next());
             product.setArticle(scanner.next());
             product.setSize(scanner.next());
-            product.setPrice(scanner.nextDouble());
+            product.setPrice(scanner.nextInt());
             shopList.add(product);
         }
     }
-    /*
-    method reads shopList from file e:\shop.txt and forms list
-     */
+
     public static void printList(List<Product> list) {
         int i =1;
         Formatter form = new Formatter();
@@ -54,8 +52,5 @@ public class Shopping {
         System.out.print(cute+"|");
         form.close();
     }
-    /*
-    method prints List in console
-     */
 
 }

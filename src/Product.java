@@ -48,8 +48,8 @@ public class Product {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setPrice(int price) {
+        this.price = (double)price/100;
     }
 
     @Override

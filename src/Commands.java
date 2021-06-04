@@ -52,7 +52,6 @@ public class Commands {
                     System.out.println("Wrong input data!");
                     System.out.println("Returning back...");
                     System.out.println();
-                    rebound();
                 }
             }
             case "/del" -> {
